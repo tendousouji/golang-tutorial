@@ -81,5 +81,44 @@ func main() {
 
 	fmt.Println("======================Exercise 6==========================================")
 	//Ex6
+	var choose uint8
+	var money uint64
+	var result float64
+	fmt.Println("1. 1 USD = 0.703108 EUR")
+	fmt.Println("2. 1 EUR = 1.422270 USD")
+	fmt.Println("3. 1 USD = 0.994284 AUD")
+	fmt.Println("4. 1 AUD = 1.005750 USD")
+	fmt.Println("5. 1 USD = 80.9730000 JPY")
+	fmt.Println("6. 1 JPY = 0.012349 USD")
+	fmt.Printf("Choose you exchane rate from 1 to 6: ")
+	fmt.Scanf("%d", &choose)
+
+	if choose >= 1 && choose <= 6 {
+		fmt.Printf("Your choice: %d\n", choose)
+		fmt.Printf("Type your money: ")
+		fmt.Scanf("%d", &money)
+		fmt.Printf("Your money: %d\n", money)
+		switch choose {
+		case 1:
+			result = float64(money) * 0.703108
+			fmt.Printf("%d USD = %.3f EUR\n", money, result)
+		case 2:
+			result = float64(money) * 1.422270
+			fmt.Printf("%d EUR = %.3f USD\n", money, result)
+		case 3:
+			result = float64(money) * 0.994284
+			fmt.Printf("%d USD = %.3f AUD\n", money, result)
+		case 4:
+			result = float64(money) * 1.005750
+			fmt.Printf("%d AUD = %.3f USD\n", money, result)
+		case 5:
+			result = float64(money) * 80.9730000
+			fmt.Printf("%d USD = %.3f JPY\n", money, result)
+		case 6:
+			result = float64(money) * 0.012349
+			fmt.Printf("%d JPY = %.3f USD\n", money, result)
+		}
+	}
+
 	fmt.Println("==========================================================================")
 }
